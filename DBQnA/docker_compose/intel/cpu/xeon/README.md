@@ -47,7 +47,10 @@ export HUGGINGFACEHUB_API_TOKEN="xxx"
 Since the `compose.yaml` will consume some environment variables, you need to setup them in advance as below.
 
 ```bash
-# host_ip should be your external IP address, do not use localhost.
+# (Optional) Set the LLM model-cache directory accordingly on the host, if not set explicitly, the `compose.yaml` will use "./data" as the default one.
+export MODEL_CACHE=<your model-cache directory>
+
+# host_ip should be your externPal IP address, do not use localhost.
 export host_ip=$(hostname -I | awk '{print $1}')
 
 # Example: no_proxy="localhost,127.0.0.1,192.168.1.1"

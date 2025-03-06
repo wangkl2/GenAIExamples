@@ -6,6 +6,8 @@ pushd "../../../../../" > /dev/null
 source .set_env.sh
 popd > /dev/null
 
+#export MODEL_CACHE=<your model-cache directory>
+
 #export host_ip=$(hostname -I | awk '{print $1}')
 
 if [ -z "${HUGGINGFACEHUB_API_TOKEN}" ]; then
